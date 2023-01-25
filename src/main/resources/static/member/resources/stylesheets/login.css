@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+
+body > .form {
+    width: 100%;
+
+    align-items: center;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container_etc > .title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.border {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 1.5rem;
+    /*box-sizing: border-box;*/
+
+}
+
+/*.border.button1 {*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+.button1 > .button {
+    background: #FEE500;
+    color: rgba(0,0,0);
+    /*width: 100%;*/
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    outline-style: none;
+    border-radius: 10px;
+    /*box-shadow: 0 2px 3px rgb(0 0 0 / 8%);*/
+    cursor: pointer;
+    height: 1.65cm;
+    width: 12.2cm;
+    font-size: 1.5rem;
+}
+
+/*.button1 > .button:active {*/
+/*    background-color: rgb(253, 213, 53);*/
+/*}*/
+
+/*.naver > .--icon{*/
+/*    width: 58px;*/
+/*    border-radius: ;*/
+/*}*/
+
+.button1 > .button > .--icon {
+    margin-top: 0.5rem;
+    margin-right: 0.8rem;
+    width: 32px;
+    /*margin-top: 0.5rem;*/
+}
+
+/*.button1 > .button > .span {*/
+/*    font-size: 1.5rem;*/
+/*    !*margin-bottom: 0.5rem;*!*/
+/*}*/
+
+.button2 > .button {
+    border: 1px solid rgba(0, 0, 0, 0.27);
+    border-radius: 50%;
+    background-color: rgba(255,255,255);
+    margin-top: 2rem;
+    margin-left: 1.3rem;
+    cursor: pointer;
+}
+
+.button2 > .button > .--icon{
+    width: 32px;
+    height: 32px;
+    padding: 0.7rem;
+}
+
+.login-div {
+    align-items: center;
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.--object {
+    width: 13rem;
+    height: 3rem;
+    margin: 1.5rem;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.27);
+    /*display: inline-block;*/
+}
+
+
+.submit-row {
+    display: none;
+}
+
+.submit-row.visible {
+    display: table-row;
+}
+
+.submit-row .submit {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: rgb(255, 0,0);
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    /*padding: 1rem 1.25rem;*/
+    padding-bottom: 1rem;
+}
+
+.form-login-button {
+    align-items: center;
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-login-button > .submit-button{
+    width: 11rem;
+    height: 3rem;
+    border-radius: 28px;
+    background: rgb(255,255,255);
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.form-login-button > .submit-button:active {
+    background: rgb(200,200,200);
+}
+
+.checkbox {
+    align-items: stretch;
+    display : flex;
+    flex-direction: row;
+    justify-content: stretch;
+
+    color: rgb(102,102,102);
+}
+
+.login-button3 {
+    align-items: center;
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ex {
+
+    padding: 6px 10px;
+    /*text-decoration: none;*/
+
+    color: #666;
+}
+

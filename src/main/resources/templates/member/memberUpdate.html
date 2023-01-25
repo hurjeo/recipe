@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>모두의 레시피 - 회원정보 수정</title>
+  <th:block th:replace="~{fragments/head :: common}"></th:block>
+  <link rel="stylesheet" th:href="@{/member/resources/stylesheets/memberUpdate.css}">
+  <script defer th:src="@{/member/resources/script/memberUpdate.js}"></script>
+
+</head>
+<body>
+<div>    <th:block th:replace="~{fragments/body :: header}"></th:block></div>
+
+<th:block th:replace="~{fragments/body :: cover}"></th:block>
+    <div class="container_etc">
+        <h1 class="title">회원정보 수정</h1>
+        <div class="modify">
+        <p class="gmm">
+            <strong class="right">email@asd.com</strong>
+        <button class="button" id="emailUpdate">이메일 수정</button>
+        </p>
+        <p class="gmm">
+            <strong class="right">nickname</strong>
+            <button class="button" id="nicknameUpdate">닉네임 수정</button>
+<!--            <div class="text">닉네임은 변경후 24시간동안 다시 변경할 수 없습니다.<br>-->
+<!--                변경전에 잘 확인해 주세요.</div>-->
+        </p>
+        <p class="gmm">
+            <strong class="right">delete</strong>
+            <button class="button" id="memberDelete">회원 탈퇴</button>
+        </p>
+        </div>
+    </div>
+</body>
+</html>

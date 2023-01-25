@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<link rel="styhesheet" th:href="@{/member/resource/stylesheets/common.css}">
+<header class="--header" th:fragment="header">
+  <div class="nav_etc">
+    <a th:href="@{login}">
+      <img src="https://recipe1.ezmember.co.kr/img/logo3.png">
+    </a>
+  </div>
+</header>
+
+<div class="--cover" id="cover" th:fragment="cover">
+  <img alt="" class="--icon" th:src="@{/member/resources/image/recipe.png}">
+  <span class="--text" rel="text">무언가를 불러오고 있습니다. 잠시만 기다려 주세요.</span>
+</div>
+</html>

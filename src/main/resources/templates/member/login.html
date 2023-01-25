@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>모두의 레시피 - 로그인</title>
+    <th:block th:replace="~{fragments/head :: common}"></th:block>
+    <link rel="stylesheet" th:href="@{/member/resources/stylesheets/login.css}">
+    <script defer th:src="@{/member/resources/script/login.js}"></script>
+
+</head>
+<body>
+<th:block th:replace="~{fragments/body :: header}"></th:block>
+<th:block th:replace="~{fragments/body :: cover}"></th:block>
+<form class="form" id="form">
+    <div class="container_etc">
+        <h2 class="title">로그인 / 회원가입</h2>
+        <div class="border">
+            <div class="button1">
+                <button type="submit" class="button" id="kakao">
+                    <img th:src="@{/member/resources/image/카카오.png}" class="--icon">
+                    <span class="span" >카카오로 간편 시작</span>
+                </button>
+            </div>
+            <div class="button2">
+                <button type="submit" class="button" id="naver">
+                    <img src="/member/resources/image/naverbtn.png" class="--icon" alt="네이버">
+                </button>
+                    <!--미구현-->
+                <button type="submit" class="button" id="google">
+                    <img src="/member/resources/image/google.png" class="--icon" alt="구글">
+                </button>
+                <button type="submit" class="button" id="facebook">
+                    <img src="/member/resources/image/facebook.png" class="--icon" alt="페이스북">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="login-div">
+        <label class="label email">
+            <span hidden>이메일</span>
+            <input autofocus class="--object" maxlength="50" name="email"
+                   placeholder="이메일" type="email">
+        </label>
+        <label class="label password">
+            <span hidden>비밀번호</span>
+            <input class="--object" maxlength="50" name="password" placeholder="비밀번호"
+                   type="password">
+        </label>
+    </div>
+    <div class="submit-row" rel="submitRow">
+    <span class="submit">
+<!--        <i class="icon fa-solid fa-triangle-exclamation"></i>-->
+        <span class="text" rel="submitText">이메일을 입력해주세요.</span>
+    </span>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" name="Checkbox">
+            <span>로그인 상태 유지</span>
+        </label>
+    </div>
+    <div class="form-login-button">
+        <input type="submit" value="로그인" class="submit-button">
+    </div>
+    <div class="login-button3">
+        <a th:href="@{/member/register}" class="ex">회원 가입</a>
+        <a th:href="@{/member/recoverEmail}" class="ex">아이디 찾기</a>
+        <a th:href="@{/member/recoverPassword}" class="ex">비밀번호 찾기</a>
+    </div>
+</form>
+</body>
+</html>
