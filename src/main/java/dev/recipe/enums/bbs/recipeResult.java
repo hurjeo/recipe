@@ -1,6 +1,6 @@
 package dev.recipe.enums.bbs;
 
-import dev.recipe.recipeArticle.interfaces.IResult;
+import dev.recipe.interfaces.IResult;
 
 public enum recipeResult implements IResult {
 

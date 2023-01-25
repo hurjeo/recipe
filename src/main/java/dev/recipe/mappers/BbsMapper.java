@@ -1,7 +1,6 @@
 package dev.recipe.mappers;
 
 import dev.recipe.entities.bbs.*;
-import dev.recipe.utils.entities.bbs.*;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

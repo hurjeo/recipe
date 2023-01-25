@@ -6,7 +6,6 @@ import dev.recipe.enums.bbs.writeResult;
 import dev.recipe.interfaces.IResult;
 import dev.recipe.mappers.BbsMapper;
 import dev.recipe.utils.JsonArrayConvert;
-import dev.recipe.utils.entities.bbs.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
