@@ -1,5 +1,6 @@
 package dev.recipe.services;
 
+
 import dev.recipe.entities.bbs.*;
 import dev.recipe.enums.CommonResult;
 import dev.recipe.enums.bbs.writeResult;
@@ -28,7 +29,8 @@ public class BbsService {
     }
 
     @Transactional
-    public Enum<? extends IResult> writeRecipe(RecipeEntity recipe, JSONArray materialArray,
+    public Enum<? extends IResult> writeRecipe(RecipeEntity recipe,
+                                               JSONArray materialArray,
                                                MultipartFile[] stepPhotos, String[] step,
                                                String isOpen,
                                                MultipartFile mainPhoto,
@@ -42,7 +44,6 @@ public class BbsService {
         }
         recipe.setMainImage(mainPhoto.getBytes());
         recipe.setMainImageType(mainPhoto.getContentType());
-        recipe.setUserEmail("ju6599@naver.com");
         if (this.BbsMapper.insertRecipe(recipe) > 0){
             // material insert
             for (Object materialObject : materialArray){
