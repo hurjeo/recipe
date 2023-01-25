@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/resources/stylesheets/common.css}">
+    <link rel="stylesheet" th:href="@{/bbs/resources/stylesheets/write.css}">
+    <script defer src="https://kit.fontawesome.com/61c8071357.js" crossorigin="anonymous"></script>
+    <script defer th:src="@{/bbs/resources/scripts/write.js}"></script>
+
+</head>
+<body>
+    <th:block th:replace="~{fragments/head :: header}"></th:block>
+    <section id="writeWrap">
+        <form class="write-form" id="writeForm">
+        <div id="titleBox">
+            <div class="head-title">레시피 등록</div>
+            <div class="head-title2">
+                <a href="#">
+                    <img src="https://recipe1.ezmember.co.kr/img/btn_tip.gif" alt="#"
+                         class="image">
+                </a>
+                <a href="#">
+                    <img src="https://recipe1.ezmember.co.kr/img/btn_id2.gif" alt="#"
+                         class="image">
+                </a>
+                <a href="#">
+                    <img src="https://recipe1.ezmember.co.kr/img/btn_guide.gif" alt="#"
+                         class="image">
+                </a>
+            </div>
+        </div>
+        
+        <div id="recipeContent" class="recipe-section">
+            <div class="content content-title">
+                <span class="input-head">레시피 제목</span>
+                <label class="label input-box">
+                    <input id="title" class="input textInput" name="title" rel="제목을" required
+                       maxlength="100" placeholder="예) 소고기 미역국 끓이기">
+                </label>
+            </div>
+
+            <div class="content content-introduce">
+                <span class="input-head">요리소개</span>
+                <label class="label input-box">
+                    <input id="recipeIntroduce" class="input textInput" name="cookName" rel="요리소개를" required
+                           maxlength="1000" placeholder="이 레시피의 탄생배경을 적어주세요. 예) 남편의 생일을 맞아 소고기 미역국을 끓여봤어요.">
+                </label>
+            </div>
+
+            <div class="content content-video">
+                <span class="input-head">동영상</span>
+                <div class="video-container">
+                    <div class="cook-video"> 준비중인 서비스 입니다.</div>
+                    <img src="https://recipe1.ezmember.co.kr/img/pic_none5.gif" alt="썸네일">
+                </div>
+
+            </div>
+
+            <div class="content content-category">
+                <span class="input-head">카테고리</span>
+                <span class="select-container">
+                    <span class="label-container">
+                        <label class="label type">
+                            <select name="categoryType" id="categoryType" class="select" required>
+                                <option value="0">종류별</option>
+                                <option value="1">밑반찬</option>
+                                <option value="2">메인반찬</option>
+                                <option value="3">국/탕</option>
+                                <option value="4">찌개</option>
+                                <option value="5">디저트</option>
+                                <option value="6">면/만두</option>
+                                <option value="7">밥/죽/떡</option>
+                                <option value="8">퓨전</option>
+                                <option value="9">김치/젓갈/장류</option>
+                                <option value="10">양념/소스/잼</option>
+                                <option value="11">양식</option>
+                                <option value="12">샐러드</option>
+                                <option value="13">스프</option>
+                                <option value="14">빵</option>
+                                <option value="15">과자</option>
+                                <option value="16">차/음료/술</option>
+                                <option value="17">기타</option>
+                            </select>
+                        </label>
+
+                        <label class="label situation">
+                            <select name="categorySituation" id="categorySituation" class="select" required>
+                                <option value="0">상황별</option>
+                                <option value="1">일상</option>
+                                <option value="2">초스피드</option>
+                                <option value="3">손님접대</option>
+                                <option value="4">술안주</option>
+                                <option value="5">다이어트</option>
+                                <option value="6">도시락</option>
+                                <option value="7">영양식</option>
+                                <option value="8">간식</option>
+                                <option value="9">야식</option>
+                                <option value="10">푸드스타일링</option>
+                                <option value="11">해장</option>
+                                <option value="12">명절</option>
+                                <option value="13">이유식</option>
+                                <option value="14">기타</option>
+                            </select>
+                        </label>
+
+                        <label class="label how">
+                            <select name="categoryHow" id="categoryHow" class="select" required>
+                                <option value="0">방법별</option>
+                                <option value="1">볶음</option>
+                                <option value="2">끓이기</option>
+                                <option value="3">부침</option>
+                                <option value="4">조림</option>
+                                <option value="5">무침</option>
+                                <option value="6">비빔</option>
+                                <option value="7">찜</option>
+                                <option value="8">절임</option>
+                                <option value="9">튀김</option>
+                                <option value="10">삶기</option>
+                                <option value="11">굽기</option>
+                                <option value="12">데치기</option>
+                                <option value="13">회</option>
+                                <option value="14">기타</option>
+                            </select>
+                        </label>
+
+                        <label class="label matter">
+                            <select name="categoryMatter" id="categoryMatter" class="select" required>
+                                <option value="0">재료별</option>
+                                <option value="1">소고기</option>
+                                <option value="2">돼지고기</option>
+                                <option value="3">닭고기</option>
+                                <option value="4">육류</option>
+                                <option value="5">채소류</option>
+                                <option value="6">해물류</option>
+                                <option value="7">달걀/유제품</option>
+                                <option value="8">가공식품류</option>
+                                <option value="9">쌀</option>
+                                <option value="10">밀가루</option>
+                                <option value="11">건어물류</option>
+                                <option value="12">버섯류</option>
+                                <option value="13">과일류</option>
+                                <option value="14">콩/견과류</option>
+                                <option value="15">곡류</option>
+                                <option value="16">기타</option>
+                            </select>
+                        </label>
+                    </span>
+                    <span class="guide">
+                        <i class="fa-regular fa-lightbulb icon"></i> 분류를 바르게 입력해주시면, 이용자들이 쉽게 레시피를 검색할 수 있어요.
+                    </span>
+                </span>
+            </div>
+
+            <div class="content content-info">
+                <span class="input-head">요리정보</span>
+                <span class="label-container">
+                    <span class="sub-head">인원</span>
+                    <label class="label">
+                        <select name="infoPersonnel" id="infoPersonnel" class="select" required>
+                            <option value="0">인원</option>
+                            <option value="1">1인분</option>
+                            <option value="2">2인분</option>
+                            <option value="3">3인분</option>
+                            <option value="4">4인분</option>
+                            <option value="5">5인분</option>
+                            <option value="6">6인분이상</option>
+                        </select>
+                </label>
+
+                <span class="sub-head">시간</span>
+                <label class="label">
+                    <select name="infoTime" id="infoTime" class="select" required>
+                        <option value="0">시간</option>
+                        <option value="1">5분이내</option>
+                        <option value="2">10분이내</option>
+                        <option value="3">15분이내</option>
+                        <option value="4">20분이내</option>
+                        <option value="5">30분이내</option>
+                        <option value="6">60분이내</option>
+                        <option value="7">90분이내</option>
+                        <option value="8">2시간이내</option>
+                        <option value="9">2시간이상</option>
+                    </select>
+                </label>
+
+                <span class="sub-head">난이도</span>
+                <label class="label">
+                    <select name="infoDifficult" id="infoDifficult" class="select" required>
+                        <option value="0">난이도</option>
+                        <option value="1">아무나</option>
+                        <option value="2">초급</option>
+                        <option value="3">중급</option>
+                        <option value="4">고급</option>
+                        <option value="5">신의경지</option>
+                    </select>
+                </label>
+                </span>
+            </div>
+
+            <span class="main-photo" id="mainPhoto">
+                <img src="https://recipe1.ezmember.co.kr/img/pic_none4.gif" alt="완성사진" class="photo" rel="mainPhoto">
+                <input type="file" accept="image/*" class="photo-button input" rel="photoButton" name="mainPhoto" required>
+            </span>
+        </div>
+
+        <div id="recipeIngredient" class="recipe-section">
+            <span class="areaCount">1</span>
+            <div class="guide">
+                <i class="fa-regular fa-lightbulb icon"></i> 재료가 남거나 부족하지 않도록 정확한 계량정보를 적어주세요.
+            </div>
+            <div id="materialContainer" class="material">
+                <div id="materialGroup1" class="group">
+                    <span class="num list-count">3</span>
+                    <div class="material-box">
+                        <div class="material-title">
+                            <input type="text" name="materialTitle" rel="materialTitle" required
+                                       class="material-title-input input" value="[재료]">
+                            <div class="button-container">
+                                <button class="material-button" type="button">
+                                    한번에 넣기
+                                </button>
+                                <button class="material-button removeGroup" name="removeArea" type="button" value="1">묶음 삭제</button>
+                            </div>
+                        </div>
+                        <ul id="materialArea1" class="materialArea">
+                            <li id="liMaterial1_1" class="material-list">
+                                <label class="label">
+                                    <input type="text" name="cookMaterialNM" rel="cookMaterialNM"
+                                           class="cook-material input">
+                                    <input type="text" name="cookMaterialCT" rel="cookMaterialCT"
+                                           class="cook-material input">
+                                </label>
+                                <i class="fa-solid fa-circle-xmark icon"></i>
+                            </li>
+                            <li id="liMaterial1_2" class="material-list">
+                                <label class="label">
+                                    <input type="text" name="cookMaterialNM" rel="cookMaterialNM"
+                                           class="cook-material input">
+                                    <input type="text" name="cookMaterialCT" rel="cookMaterialCT"
+                                           class="cook-material input">
+                                </label>
+                                <i class="fa-solid fa-circle-xmark icon"></i>
+                            </li>
+                            <li id="liMaterial1_3" class="material-list">
+                                <label class="label">
+                                    <input type="text" name="cookMaterialNM" rel="cookMaterialNM"
+                                           class="cook-material input">
+                                    <input type="text" name="cookMaterialCT" rel="cookMaterialCT"
+                                           class="cook-material input">
+                                </label>
+                                <i class="fa-solid fa-circle-xmark icon"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="add-list">
+                        <button type="button" class="list-add">
+                            <i class="fa-solid fa-circle-plus icon"></i>추가
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="add-container">
+                <div class="warning">
+                    ※ 양념, 양념장, 소스, 드레싱, 토핑, 시럽, 육수 밑간 등으로 구분해서 작성해주세요.
+                </div>
+                <div class="add-ul">
+                    <button type="button" class="ul-add" rel="ulAdd" value="addUl_1">
+                        <i class="fa-solid fa-plus icon"></i> 재료/양념 묶음 추가
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="recipeStep" class="step-section">
+            <span class="step-num">1</span>
+            <p class="step-title">
+                요리순서
+                <button type="button" rel="stepPhotoButton" class="photo-add">
+                    <i class="fa-solid fa-plus icon"></i> 순서사진 한번에 넣기
+                </button>
+            </p>
+            <div class="step-tip-container">
+                <span class="step-tip">
+                <i class="fa-regular fa-lightbulb icon"></i><b>요리의 맛이 좌우될 수 있는 중요한 부분은 빠짐없이 적어주세요.</b><br>
+		        예) 10분간 익혀주세요 ▷ 10분간 약한불로 익혀주세요.<br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;마늘편은 익혀주세요 ▷ 마늘편을 충분히 익혀주셔야 매운 맛이 사라집니다.<br>
+		        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;꿀을 조금 넣어주세요 ▷ 꿀이 없는 경우, 설탕 1스푼으로 대체 가능합니다.
+	            </span>
+            </div>
+            <div id="stepItem1" class="step-box">
+                <p class="step-title">
+                    Step1
+                </p>
+                <textarea name="stepText" id="stepText1" class="step-content" placeholder="예) 고기가 반쯤 익어갈때 양파를 함께 볶아요"></textarea>
+                <img id="stepImage1" src="https://recipe1.ezmember.co.kr/img/pic_none2.gif" class="image stepImg" alt="업로드이미지">
+                <input id="stepInput1" type="file" accept="image/*" name="stepImage" class="step-input input">
+                <div class="step-button">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </div>
+            <div class="step-add" rel="stepAdd">
+                <button type="button" class="step-add-button">
+                    <i class="fa-solid fa-circle-plus icon"></i> 순서 추가
+                </button>
+            </div>
+
+            <div class="complete-image-area">
+                <p class="complete-head">
+                    요리 완성사진
+                    <button type="button" class="add-complete-image">
+                        <i class="fa-solid fa-plus icon"></i> 사진 한번에 넣기
+                    </button>
+                </p>
+                <div class="complete-image-container">
+                    <div id="uploadImage1" class="upload-image">
+                        <img src="https://recipe1.ezmember.co.kr/img/pic_none2.gif" class="image" alt="완성이미지"
+                        rel="completeImg1">
+                        <input type="file" accept="image/*" class="complete photo-button input" name="completePhoto">
+                    </div>
+                    <div id="uploadImage2" class="upload-image">
+                        <img src="https://recipe1.ezmember.co.kr/img/pic_none2.gif" class="image" alt="완성이미지">
+                        <input type="file" accept="image/*" class="complete photo-button input" name="completePhoto">
+                    </div>
+                    <div id="uploadImage3" class="upload-image">
+                        <img src="https://recipe1.ezmember.co.kr/img/pic_none2.gif" class="image" alt="완성이미지">
+                        <input type="file" accept="image/*" class="complete photo-button input" name="completePhoto">
+                    </div>
+                    <div id="uploadImage4" class="upload-image">
+                        <img src="https://recipe1.ezmember.co.kr/img/pic_none2.gif" class="image" alt="완성이미지">
+                        <input type="file" accept="image/*" class="complete photo-button input" name="completePhoto">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div id="recipeTip" class="recipe-section">
+             <p class="tip-head">요리팁</p>
+             <textarea name="cookTip" id="cookTip" class="tip-text textInput" rel="팁을" required
+                       placeholder="예) 고기요리에는 소금보다 설탕을 먼저 넣어야 단맛이 겉돌지 않고 육질이 부드러워요."></textarea>
+         </div>
+
+         <div id="recipeButtonContainer" class="recipe-section">
+             <button type="submit" class="save button" id="save" name="submit">저장</button>
+             <button type="submit" class="submit button" id="saveOpen" name="submit">저장 후 공개하기</button>
+             <button type="button" class="cancel button">취소</button>
+         </div>
+        </form>
+    </section>
+
+</body>
+</html>

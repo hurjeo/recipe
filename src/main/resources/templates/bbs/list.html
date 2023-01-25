@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/resources/stylesheets/common.css}">
+    <link rel="stylesheet" th:href="@{/bbs/resources/stylesheets/list.css}">
+    <script defer src="https://kit.fontawesome.com/61c8071357.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<th:block th:replace="~{fragments/head :: header}"></th:block>
+
+<section id="listWrap">
+    <dl id="recipeEvent">
+        <dd class="event">
+            <div class="left arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-left icon fa-4x"></i>
+                </a>
+            </div>
+            <ul class="event-list">
+                <li class="event-item">
+                    <a href="#" class="event-link" rel="eventLink">
+                        <img class="image" src="https://recipe1.ezmember.co.kr/cache/rpe/2022/11/30/d5e74b22dc365b1a6c913a1ea361d1e51.jpg" alt="#">
+                    </a>
+                </li>
+                <li class="event-item">
+                    <a href="#" class="event-link" rel="eventLink">
+                        <img class="image" src="https://recipe1.ezmember.co.kr/cache/rpe/2022/11/30/d5e74b22dc365b1a6c913a1ea361d1e51.jpg" alt="#">
+                    </a>
+                </li>
+                <li class="event-item">
+                    <a href="#" class="event-link" rel="eventLink">
+                        <img class="image" src="https://recipe1.ezmember.co.kr/cache/rpe/2022/11/30/d5e74b22dc365b1a6c913a1ea361d1e51.jpg" alt="#">
+                    </a>
+                </li>
+            </ul>
+            <div class="right arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-right icon fa-4x"></i>
+                </a>
+            </div>
+        </dd>
+</dl>
+
+    <dl id="shopContainer">
+        <dt class="shop-title title-box">
+            <h3>
+                <span class="title">쇼핑</span>
+                BEST
+            </h3>
+        </dt>
+        <dd class="shop">
+            <div class="left arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-left icon fa-4x"></i>
+                </a>
+            </div>
+
+            <ul class="shop-list">
+                <li class="shop-item">
+                    <a href="#" class="shop-link" rel="shopLink">
+                    <img class="image" src="https://recipe1.ezmember.co.kr/cache/data/goods/22/05/20/1000028179/1000028174_detail_072.jpg?w=500" alt="#">
+                        <div class="shop-info">
+                            <div class="shop-title">사탕</div>
+                            <div class="shop-price">1만원</div>
+                            <div class="shop-score">
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="shop-item">
+                    <a href="#" class="shop-link" rel="shopLink">
+                        <img class="image" src="https://recipe1.ezmember.co.kr/cache/data/goods/22/05/20/1000028179/1000028174_detail_072.jpg?w=500" alt="#">
+                        <div class="shop-info">
+                            <div class="shop-title">사탕</div>
+                            <div class="shop-price">1만원</div>
+                            <div class="shop-score">
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="shop-item">
+                    <a href="#" class="shop-link" rel="shopLink">
+                        <img class="image" src="https://recipe1.ezmember.co.kr/cache/data/goods/22/05/20/1000028179/1000028174_detail_072.jpg?w=500" alt="#">
+                        <div class="shop-info">
+                            <div class="shop-title">사탕</div>
+                            <div class="shop-price">1만원</div>
+                            <div class="shop-score">
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="shop-item">
+                    <a href="#" class="shop-link" rel="shopLink">
+                        <img class="image" src="https://recipe1.ezmember.co.kr/cache/data/goods/22/05/20/1000028179/1000028174_detail_072.jpg?w=500" alt="#">
+                        <div class="shop-info">
+                            <div class="shop-title">사탕</div>
+                            <div class="shop-price">1만원</div>
+                            <div class="shop-score">
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="shop-item">
+                    <a href="#" class="shop-link" rel="shopLink">
+                        <img class="image" src="https://recipe1.ezmember.co.kr/cache/data/goods/22/05/20/1000028179/1000028174_detail_072.jpg?w=500" alt="#">
+                        <div class="shop-info">
+                            <div class="shop-title">사탕</div>
+                            <div class="shop-price">1만원</div>
+                            <div class="shop-score">
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                                <i class="fa-solid fa-star score"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="right arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-right fa-4x icon"></i>
+                </a>
+            </div>
+        </dd>
+    </dl>
+
+    <dl id="tipContainer">
+        <dt class="tip-title title-box">
+            <h3>
+                <span class="title">
+                    핵꿀팁 만개의 BEST 요리모음
+                </span>
+            </h3>
+        </dt>
+        <dd class="tip">
+            <div class="left arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-left icon fa-4x"></i>
+                </a>
+            </div>
+
+            <ul class="tip-list">
+                <li class="tip-item">
+                    <a href="#" class="tip-link" rel="tipLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2022/09/29/87411c51ac208e2d37e7f28c29b43e501.jpg" alt="#" class="image">
+                        <div class="tip-title">
+                            팁1
+                        </div>
+                    </a>
+                </li>
+                <li class="tip-item">
+                    <a href="#" class="tip-link" rel="tipLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2022/09/29/87411c51ac208e2d37e7f28c29b43e501.jpg" alt="#" class="image">
+                        <div class="tip-title">
+                            팁1
+                        </div>
+                    </a>
+                </li>
+                <li class="tip-item">
+                    <a href="#" class="tip-link" rel="tipLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2022/09/29/87411c51ac208e2d37e7f28c29b43e501.jpg" alt="#" class="image">
+                        <div class="tip-title">
+                            팁1
+                        </div>
+                    </a>
+                </li>
+                <li class="tip-item">
+                    <a href="#" class="tip-link" rel="tipLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2022/09/29/87411c51ac208e2d37e7f28c29b43e501.jpg" alt="#" class="image">
+                        <div class="tip-title">
+                            팁1
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="right arrow">
+                <a href="#">
+                <i class="fa-solid fa-chevron-right fa-4x icon"></i>
+                </a>
+            </div>
+        </dd>
+    </dl>
+
+    <dl id="issueContainer">
+        <dt class="issue-title title-box">
+            <h3>
+                <span class="title">
+                    화제의
+                    <span>TV 레시피</span>
+                </span>
+            </h3>
+        </dt>
+        <dd class="issue">
+            <div class="left arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-left icon fa-4x"></i>
+                </a>
+            </div>
+
+            <ul class="issue-list">
+
+                <li class="issue-item">
+                    <a href="#" class="issue-link" rel="issueLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="tip-title">
+                            전참시
+                        </div>
+                    </a>
+                </li>
+                <li class="issue-item">
+                    <a href="#" class="issue-link" rel="issueLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="tip-title">
+                            전참시
+                        </div>
+                    </a>
+                </li>
+                <li class="issue-item">
+                    <a href="#" class="issue-link" rel="issueLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="tip-title">
+                            전참시
+                        </div>
+                    </a>
+                </li>
+                <li class="issue-item">
+                    <a href="#" class="issue-link" rel="issueLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="tip-title">
+                            전참시
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="right arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-right fa-4x icon"></i>
+                </a>
+            </div>
+        </dd>
+    </dl>
+
+    <dl id="chefContainer">
+        <dt class="chef-title title-box">
+            <h3>
+                <span class="title">
+                    <span>쉐프</span>
+                    소개
+                </span>
+            </h3>
+        </dt>
+        <dd class="chef">
+            <div class="left arrow">
+                <div>
+                    <i class="fa-solid fa-chevron-left icon fa-4x"></i>
+                </div>
+            </div>
+
+            <ul class="chef-list">
+                <li class="chef-item">
+                    <a href="#" class="chef-link" rel="chefLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="chef-name">
+                            1
+                        </div>
+                    </a>
+                    <a href="#" class="follow-link" rel="followLink">
+                        <div class="follow">
+                            +소식받기
+                        </div>
+                    </a>
+                </li>
+                <li class="chef-item">
+                    <a href="#" class="chef-link" rel="chefLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="chef-name">
+                            2
+                        </div>
+                    </a>
+                    <a href="#" class="follow-link" rel="followLink">
+                        <div class="follow">
+                            +소식받기
+                        </div>
+                    </a>
+                </li>
+                <li class="chef-item">
+                    <a href="#" class="chef-link" rel="chefLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="chef-name">
+                            3
+                        </div>
+                    </a>
+                    <a href="#" class="follow-link" rel="followLink">
+                        <div class="follow">
+                            +소식받기
+                        </div>
+                    </a>
+                </li>
+                <li class="chef-item">
+                    <a href="#" class="chef-link" rel="chefLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="chef-name">
+                            4
+                        </div>
+                    </a>
+                    <a href="#" class="follow-link" rel="followLink">
+                        <div class="follow">
+                            +소식받기
+                        </div>
+                    </a>
+                </li>
+                <li class="chef-item">
+                    <a href="#" class="chef-link" rel="chefLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="chef-name">
+                            5
+                        </div>
+                    </a>
+                    <a href="#" class="follow-link" rel="followLink">
+                        <div class="follow">
+                            +소식받기
+                        </div>
+                    </a>
+                </li>
+                <li class="chef-item">
+                    <a href="#" class="chef-link" rel="chefLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="chef-name">
+                            6
+                        </div>
+                    </a>
+                    <a href="#" class="follow-link" rel="followLink">
+                        <div class="follow">
+                            +소식받기
+                        </div>
+                    </a>
+                </li>
+                <li class="chef-item">
+                    <a href="#" class="chef-link" rel="chefLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="chef-name">
+                            7
+                        </div>
+                    </a>
+                    <a href="#" class="follow-link" rel="followLink">
+                        <div class="follow">
+                            +소식받기
+                        </div>
+                    </a>
+                </li>
+                <li class="chef-item">
+                    <a href="#" class="chef-link" rel="chefLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="chef-name">
+                            8
+                        </div>
+                    </a>
+                    <a href="#" class="follow-link" rel="followLink">
+                        <div class="follow">
+                            +소식받기
+                        </div>
+                    </a>
+                </li>
+                <li class="chef-item">
+                    <a href="#" class="chef-link" rel="chefLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="chef-name">
+                            9
+                        </div>
+                    </a>
+                    <a href="#" class="follow-link" rel="followLink">
+                        <div class="follow">
+                            +소식받기
+                        </div>
+                    </a>
+                </li>
+                <li class="chef-item">
+                    <a href="#" class="chef-link" rel="chefLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/12/20/cf66c64f88dc68711f55c6b65b0f0eba1.jpg" alt="#" class="image">
+                        <div class="chef-name">
+                            10
+                        </div>
+                    </a>
+                    <a href="#" class="follow-link" rel="followLink">
+                        <div class="follow">
+                            +소식받기
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="right arrow">
+                <div>
+                    <i class="fa-solid fa-chevron-right fa-4x icon"></i>
+                </div>
+            </div>
+        </dd>
+    </dl>
+
+    <dl id="rankingContainer">
+        <dt class="ranking-title title-box">
+            <h3>
+                <span class="title">9999+ 명예의 전당</span>
+            </h3>
+        </dt>
+        <dd class="ranking">
+            <div class="left arrow">
+                <div>
+                    <i class="fa-solid fa-chevron-left icon fa-4x"></i>
+                </div>
+            </div>
+
+            <ul class="ranking-list">
+                <li class="ranking-item">
+                    <a href="#" class="ranking-link" rel="rankingLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/08/09/24b85da64bc678c4cee2122611a667841_f.jpg"
+                             alt="#" class="image">
+                        <span class="ranking-title" rel="rankinTitle">
+                            가지볶음보다 맛있는 가지 스테이크 맛보면 멈출 수 없어요.
+                        </span>
+                    </a>
+                </li>
+                <li class="ranking-item">
+                    <a href="#" class="ranking-link" rel="rankingLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/08/09/24b85da64bc678c4cee2122611a667841_f.jpg"
+                             alt="#" class="image">
+                        <span class="ranking-title" rel="rankinTitle">
+                            가지볶음보다 맛있는 가지 스테이크 맛보면 멈출 수 없어요.
+                        </span>
+                    </a>
+                </li>
+                <li class="ranking-item">
+                    <a href="#" class="ranking-link" rel="rankingLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/08/09/24b85da64bc678c4cee2122611a667841_f.jpg"
+                             alt="#" class="image">
+                        <span class="ranking-title" rel="rankinTitle">
+                            가지볶음보다 맛있는 가지 스테이크 맛보면 멈출 수 없어요.
+                        </span>
+                    </a>
+                </li>
+                <li class="ranking-item">
+                    <a href="#" class="ranking-link" rel="rankingLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/08/09/24b85da64bc678c4cee2122611a667841_f.jpg"
+                             alt="#" class="image">
+                        <span class="ranking-title" rel="rankinTitle">
+                            가지볶음보다 맛있는 가지 스테이크 맛보면 멈출 수 없어요.
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="right arrow">
+                <div>
+                    <i class="fa-solid fa-chevron-right fa-4x icon"></i>
+                </div>
+            </div>
+        </dd>
+    </dl>
+
+    <dl id="recommendContainer">
+        <dt class="recommend-title title-box">
+            <h3>
+                자취생, 혼밥족을 위한<span class="title">편의점 꿀조합</span>
+            </h3>
+        </dt>
+        <dd class="recommend">
+            <div class="left arrow">
+                <div>
+                    <i class="fa-solid fa-chevron-left fa-4x icon"></i>
+                </div>
+            </div>
+            <ul class="recommend-list">
+                <li class="recommend-item">
+                    <a href="#" class="recommend-link" rel="recommendLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2020/03/02/da2963a670cbbf96dee505ec9dcf77d81.jpg"
+                             alt="#" class="image">
+                        <span class="recommend-title" rel="recommendTitle">
+                            뽕! 탁! 이보다 쉬울순 없어! 초간단 자취요리! 카레치즈 라면!
+                        </span>
+                    </a>
+                </li>
+                <li class="recommend-item">
+                    <a href="#" class="recommend-link" rel="recommendLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2020/03/02/da2963a670cbbf96dee505ec9dcf77d81.jpg"
+                             alt="#" class="image">
+                        <span class="recommend-title" rel="recommendTitle">
+                            뽕! 탁! 이보다 쉬울순 없어! 초간단 자취요리! 카레치즈 라면!
+                        </span>
+                    </a>
+                </li>
+                <li class="recommend-item">
+                    <a href="#" class="recommend-link" rel="recommendLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2020/03/02/da2963a670cbbf96dee505ec9dcf77d81.jpg"
+                             alt="#" class="image">
+                        <span class="recommend-title" rel="recommendTitle">
+                            뽕! 탁! 이보다 쉬울순 없어! 초간단 자취요리! 카레치즈 라면!
+                        </span>
+                    </a>
+                </li>
+                <li class="recommend-item">
+                    <a href="#" class="recommend-link" rel="recommendLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2020/03/02/da2963a670cbbf96dee505ec9dcf77d81.jpg"
+                             alt="#" class="image">
+                        <span class="recommend-title" rel="recommendTitle">
+                            뽕! 탁! 이보다 쉬울순 없어! 초간단 자취요리! 카레치즈 라면!
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="right arrow">
+                <div>
+                    <i class="fa-solid fa-chevron-right fa-4x icon"></i>
+                </div>
+            </div>
+        </dd>
+    </dl>
+
+    <dl id="magazineContainer">
+        <dt class="magazine-title title-box">
+            <a href="#">
+                <h3>
+                    쇼핑 <span class="title">매거진</span>
+                </h3>
+            </a>
+        </dt>
+        <dd class="magazine">
+            <div class="left arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-left fa-4x icon"></i>
+                </a>
+            </div>
+            <ul class="magazine-list">
+                <li class="magazine-item">
+                    <a href="#" class="magazine-link" rel="magazineLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2022/10/27/ad15b90c9a3a2092927293c213ec2d371_f.jpg"
+                             alt="#" class="image">
+                        <span class="magazine-title" rel="magazineTitle">
+                            [만개의리뷰] 예쁜 미니 밥솥, 자취생 신혼부부 추천! 스벤슨 꿀떡 밥솥
+                        </span>
+                    </a>
+                </li>
+                <li class="magazine-item">
+                    <a href="#" class="magazine-link" rel="magazineLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2022/10/27/ad15b90c9a3a2092927293c213ec2d371_f.jpg"
+                             alt="#" class="image">
+                        <span class="magazine-title" rel="magazineTitle">
+                            [만개의리뷰] 예쁜 미니 밥솥, 자취생 신혼부부 추천! 스벤슨 꿀떡 밥솥
+                        </span>
+                    </a>
+                </li>
+                <li class="magazine-item">
+                    <a href="#" class="magazine-link" rel="magazineLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2022/10/27/ad15b90c9a3a2092927293c213ec2d371_f.jpg"
+                             alt="#" class="image">
+                        <span class="magazine-title" rel="magazineTitle">
+                            [만개의리뷰] 예쁜 미니 밥솥, 자취생 신혼부부 추천! 스벤슨 꿀떡 밥솥
+                        </span>
+                    </a>
+                </li>
+                <li class="magazine-item">
+                    <a href="#" class="magazine-link" rel="magazineLink">
+                        <img src="https://recipe1.ezmember.co.kr/cache/recipe/2022/10/27/ad15b90c9a3a2092927293c213ec2d371_f.jpg"
+                             alt="#" class="image">
+                        <span class="magazine-title" rel="magazineTitle">
+                            [만개의리뷰] 예쁜 미니 밥솥, 자취생 신혼부부 추천! 스벤슨 꿀떡 밥솥
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="right arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-right fa-4x icon"></i>
+                </a>
+            </div>
+        </dd>
+
+    </dl>
+
+    <dl id="categoryContainer">
+        <dt class="category-title title-box">
+            <a href="#">
+                <h3>
+                    레시피 <span class="title">분류</span>
+                </h3>
+            </a>
+        </dt>
+        <dd class="category">
+            <div class="left arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-left fa-4x icon"></i>
+                </a>
+            </div>
+            <ul class="category-list">
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link" rel="categoryLink">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/cate1_01.png"
+                             alt="#" class="image">
+                        <span class="category-title" rel="categoryTitle">
+                           전체
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="right arrow">
+                <a href="#">
+                    <i class="fa-solid fa-chevron-right fa-4x icon"></i>
+                </a>
+            </div>
+        </dd>
+    </dl>
+
+    <dl id="best-container">
+        <dt class="best-title title-box">
+            <a href="#">
+                <h3>
+                    <span class="title">베스트</span>레시피
+                </h3>
+            </a>
+        </dt>
+        <dd class="best">
+            <ul class="best-list">
+
+                <li class="best-item">
+
+                    <p class="best-num">
+                        <b>1</b>
+                    </p>
+
+                    <div class="best-image">
+                        <a href="#">
+                            <img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/03/22/93dd58483544283879abe07cb3ca75961_m.jpg"
+                                 alt="#" class="image">
+                        </a>
+                    </div>
+
+                    <div class="best-title">
+                        <div class="best-head">
+                            백종원레시피로 만든 콩나물무침으로 밥 한 끼 뚝딱 ~
+                        </div>
+                        <div class="best-writer">
+                            <a href="#">
+                                <img src="https://recipe1.ezmember.co.kr/cache/rpf/2017/12/06/c3e305ae9ddd252fb21ef0f02f5dd0d81.de9e26210e79e8c2fa5707df5f84c55d"
+                                     alt="#" class="image">
+                                뽕림이
+                            </a>
+                        </div>
+                        <div class="score-container">
+                            <span class="score star">
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                            </span>
+                            <span class="judge">
+                                (111)
+                            </span>
+                            <span class="view">
+                                조회수 54.1만
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="best-item">
+
+                    <p class="best-num">
+                        <b>1</b>
+                    </p>
+
+                    <div class="best-image">
+                        <a href="#">
+                            <img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/03/22/93dd58483544283879abe07cb3ca75961_m.jpg"
+                                 alt="#" class="image">
+                        </a>
+                    </div>
+
+                    <div class="best-title">
+                        <div class="best-head">
+                            백종원레시피로 만든 콩나물무침으로 밥 한 끼 뚝딱 ~
+                        </div>
+                        <div class="best-writer">
+                            <a href="#">
+                                <img src="https://recipe1.ezmember.co.kr/cache/rpf/2017/12/06/c3e305ae9ddd252fb21ef0f02f5dd0d81.de9e26210e79e8c2fa5707df5f84c55d"
+                                     alt="#" class="image">
+                                뽕림이
+                            </a>
+                        </div>
+                        <div class="score-container">
+                            <span class="score star">
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                            </span>
+                            <span class="judge">
+                                (111)
+                            </span>
+                            <span class="view">
+                                조회수 54.1만
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="best-item">
+
+                    <p class="best-num">
+                        <b>1</b>
+                    </p>
+
+                    <div class="best-image">
+                        <a href="#">
+                            <img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/03/22/93dd58483544283879abe07cb3ca75961_m.jpg"
+                                 alt="#" class="image">
+                        </a>
+                    </div>
+
+                    <div class="best-title">
+                        <div class="best-head">
+                            백종원레시피로 만든 콩나물무침으로 밥 한 끼 뚝딱 ~
+                        </div>
+                        <div class="best-writer">
+                            <a href="#">
+                                <img src="https://recipe1.ezmember.co.kr/cache/rpf/2017/12/06/c3e305ae9ddd252fb21ef0f02f5dd0d81.de9e26210e79e8c2fa5707df5f84c55d"
+                                     alt="#" class="image">
+                                뽕림이
+                            </a>
+                        </div>
+                        <div class="score-container">
+                            <span class="score star">
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                            </span>
+                            <span class="judge">
+                                (111)
+                            </span>
+                            <span class="view">
+                                조회수 54.1만
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="best-item">
+
+                    <p class="best-num">
+                        <b>1</b>
+                    </p>
+
+                    <div class="best-image">
+                        <a href="#">
+                            <img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/03/22/93dd58483544283879abe07cb3ca75961_m.jpg"
+                                 alt="#" class="image">
+                        </a>
+                    </div>
+
+                    <div class="best-title">
+                        <div class="best-head">
+                            백종원레시피로 만든 콩나물무침으로 밥 한 끼 뚝딱 ~
+                        </div>
+                        <div class="best-writer">
+                            <a href="#">
+                                <img src="https://recipe1.ezmember.co.kr/cache/rpf/2017/12/06/c3e305ae9ddd252fb21ef0f02f5dd0d81.de9e26210e79e8c2fa5707df5f84c55d"
+                                     alt="#" class="image">
+                                뽕림이
+                            </a>
+                        </div>
+                        <div class="score-container">
+                            <span class="score star">
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                            </span>
+                            <span class="judge">
+                                (111)
+                            </span>
+                            <span class="view">
+                                조회수 54.1만
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="best-item">
+
+                    <p class="best-num">
+                        <b>1</b>
+                    </p>
+
+                    <div class="best-image">
+                        <a href="#">
+                            <img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/03/22/93dd58483544283879abe07cb3ca75961_m.jpg"
+                                 alt="#" class="image">
+                        </a>
+                    </div>
+
+                    <div class="best-title">
+                        <div class="best-head">
+                            백종원레시피로 만든 콩나물무침으로 밥 한 끼 뚝딱 ~
+                        </div>
+                        <div class="best-writer">
+                            <a href="#">
+                                <img src="https://recipe1.ezmember.co.kr/cache/rpf/2017/12/06/c3e305ae9ddd252fb21ef0f02f5dd0d81.de9e26210e79e8c2fa5707df5f84c55d"
+                                     alt="#" class="image">
+                                뽕림이
+                            </a>
+                        </div>
+                        <div class="score-container">
+                            <span class="score star">
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                            </span>
+                            <span class="judge">
+                                (111)
+                            </span>
+                            <span class="view">
+                                조회수 54.1만
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="best-item">
+
+                    <p class="best-num">
+                        <b>1</b>
+                    </p>
+
+                    <div class="best-image">
+                        <a href="#">
+                            <img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/03/22/93dd58483544283879abe07cb3ca75961_m.jpg"
+                                 alt="#" class="image">
+                        </a>
+                    </div>
+
+                    <div class="best-title">
+                        <div class="best-head">
+                            백종원레시피로 만든 콩나물무침으로 밥 한 끼 뚝딱 ~
+                        </div>
+                        <div class="best-writer">
+                            <a href="#">
+                                <img src="https://recipe1.ezmember.co.kr/cache/rpf/2017/12/06/c3e305ae9ddd252fb21ef0f02f5dd0d81.de9e26210e79e8c2fa5707df5f84c55d"
+                                     alt="#" class="image">
+                                뽕림이
+                            </a>
+                        </div>
+                        <div class="score-container">
+                            <span class="score star">
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                            </span>
+                            <span class="judge">
+                                (111)
+                            </span>
+                            <span class="view">
+                                조회수 54.1만
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="best-item">
+
+                    <p class="best-num">
+                        <b>1</b>
+                    </p>
+
+                    <div class="best-image">
+                        <a href="#">
+                            <img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/03/22/93dd58483544283879abe07cb3ca75961_m.jpg"
+                                 alt="#" class="image">
+                        </a>
+                    </div>
+
+                    <div class="best-title">
+                        <div class="best-head">
+                            백종원레시피로 만든 콩나물무침으로 밥 한 끼 뚝딱 ~
+                        </div>
+                        <div class="best-writer">
+                            <a href="#">
+                                <img src="https://recipe1.ezmember.co.kr/cache/rpf/2017/12/06/c3e305ae9ddd252fb21ef0f02f5dd0d81.de9e26210e79e8c2fa5707df5f84c55d"
+                                     alt="#" class="image">
+                                뽕림이
+                            </a>
+                        </div>
+                        <div class="score-container">
+                            <span class="score star">
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                            </span>
+                            <span class="judge">
+                                (111)
+                            </span>
+                            <span class="view">
+                                조회수 54.1만
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="best-item">
+
+                    <p class="best-num">
+                        <b>1</b>
+                    </p>
+
+                    <div class="best-image">
+                        <a href="#">
+                            <img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/03/22/93dd58483544283879abe07cb3ca75961_m.jpg"
+                                 alt="#" class="image">
+                        </a>
+                    </div>
+
+                    <div class="best-title">
+                        <div class="best-head">
+                            백종원레시피로 만든 콩나물무침으로 밥 한 끼 뚝딱 ~
+                        </div>
+                        <div class="best-writer">
+                            <a href="#">
+                                <img src="https://recipe1.ezmember.co.kr/cache/rpf/2017/12/06/c3e305ae9ddd252fb21ef0f02f5dd0d81.de9e26210e79e8c2fa5707df5f84c55d"
+                                     alt="#" class="image">
+                                뽕림이
+                            </a>
+                        </div>
+                        <div class="score-container">
+                            <span class="score star">
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                            </span>
+                            <span class="judge">
+                                (111)
+                            </span>
+                            <span class="view">
+                                조회수 54.1만
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="best-item">
+
+                    <p class="best-num">
+                        <b>1</b>
+                    </p>
+
+                    <div class="best-image">
+                        <a href="#">
+                            <img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/03/22/93dd58483544283879abe07cb3ca75961_m.jpg"
+                                 alt="#" class="image">
+                        </a>
+                    </div>
+
+                    <div class="best-title">
+                        <div class="best-head">
+                            백종원레시피로 만든 콩나물무침으로 밥 한 끼 뚝딱 ~
+                        </div>
+                        <div class="best-writer">
+                            <a href="#">
+                                <img src="https://recipe1.ezmember.co.kr/cache/rpf/2017/12/06/c3e305ae9ddd252fb21ef0f02f5dd0d81.de9e26210e79e8c2fa5707df5f84c55d"
+                                     alt="#" class="image">
+                                뽕림이
+                            </a>
+                        </div>
+                        <div class="score-container">
+                            <span class="score star">
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                            </span>
+                            <span class="judge">
+                                (111)
+                            </span>
+                            <span class="view">
+                                조회수 54.1만
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="best-item">
+
+                    <p class="best-num">
+                        <b>1</b>
+                    </p>
+
+                    <div class="best-image">
+                        <a href="#">
+                            <img src="https://recipe1.ezmember.co.kr/cache/recipe/2017/03/22/93dd58483544283879abe07cb3ca75961_m.jpg"
+                                 alt="#" class="image">
+                        </a>
+                    </div>
+
+                    <div class="best-title">
+                        <div class="best-head">
+                            백종원레시피로 만든 콩나물무침으로 밥 한 끼 뚝딱 ~
+                        </div>
+                        <div class="best-writer">
+                            <a href="#">
+                                <img src="https://recipe1.ezmember.co.kr/cache/rpf/2017/12/06/c3e305ae9ddd252fb21ef0f02f5dd0d81.de9e26210e79e8c2fa5707df5f84c55d"
+                                     alt="#" class="image">
+                                뽕림이
+                            </a>
+                        </div>
+                        <div class="score-container">
+                            <span class="score star">
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                                <i class="fa-solid fa-star icon"></i>
+                            </span>
+                            <span class="judge">
+                                (111)
+                            </span>
+                            <span class="view">
+                                조회수 54.1만
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </dd>
+    </dl>
+
+    <th:block th:replace="~{fragments/foot :: footer}"></th:block>
+
+</section>
+</body>
+</html>

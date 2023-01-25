@@ -2,19 +2,19 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="dev.recipe.recipemember.mappers.IMemberMapper">
+<mapper namespace="dev.recipe.mappers.IMemberMapper">
 
     <insert id="insertEmailAuth"
             useGeneratedKeys="true"
             keyProperty="index"
             keyColumn="index"
-            parameterType="dev.recipe.recipemember.entities.EmailAuthEntity">
+            parameterType="dev.recipe.entities.EmailAuthEntity">
         INSERT INTO `recipe_member`.`email_auths`(`email`, `code`, `salt`, `created_on`, `expires_on`, `expires_flag`)
         VALUES (#{email}, #{code}, #{salt}, #{createdOn}, #{expiresOn}, #{expiresFlag})
     </insert>
 
     <insert id="insertUser"
-            parameterType="dev.recipe.recipemember.entities.UserEntity">
+            parameterType="dev.recipe.entities.UserEntity">
         INSERT INTO `recipe_member`.`users`(email, `password`, `image_name`, `image_data`, `image_type`, age, gender,
                                             nickname, `name`,
                                             contact, address_postal, address_primary, address_secondary)
@@ -24,7 +24,7 @@
     </insert>
 
     <insert id="insertKakao"
-            parameterType="dev.recipe.recipemember.entities.kakao.KakaoEntity">
+            parameterType="dev.recipe.entities.kakao.KakaoEntity">
         INSERT INTO `recipe_member`.`kakao_users`(id, email, nickname, profile_image, thumbnail_image, age_range,
                                                   gender, registered_on)
         VALUES (#{id}, #{email}, #{nickname}, #{profileImage}, #{thumbnailImage}, #{ageRange}, #{gender},
@@ -32,21 +32,21 @@
     </insert>
 
     <insert id="insertNaver"
-            parameterType="dev.recipe.recipemember.entities.naver.NaverEntity">
+            parameterType="dev.recipe.entities.naver.NaverEntity">
         INSERT INTO `recipe_member`.`naver_users`(id, email, nickname, profile_image, age, gender, registered_on)
         VALUES (#{id}, #{email}, #{nickname}, #{profileImage}, #{age}, #{gender},
                 IFNULL(#{registeredOn}, DEFAULT(`registered_on`)))
     </insert>
 
     <insert id="insertGoogle"
-            parameterType="dev.recipe.recipemember.entities.google.GoogleEntity">
+            parameterType="dev.recipe.entities.google.GoogleEntity">
         INSERT INTO `recipe_member`.`google_users`(id, email, nickname, profile_image, age, gender, registered_on)
         VALUES (#{id}, #{email}, #{nickname}, #{profileImage}, #{age}, #{gender},
                 IFNULL(#{registeredOn}, DEFAULT(`registered_on`)))
     </insert>
 
     <select id="selectUserByNaverId"
-            resultType="dev.recipe.recipemember.entities.naver.NaverEntity">
+            resultType="dev.recipe.entities.naver.NaverEntity">
         SELECT `id`            AS `id`,
                `email`         AS `email`,
                `nickname`      AS `nickname`,
@@ -60,7 +60,7 @@
     </select>
 
     <select id="selectUserByGoogleId"
-            resultType="dev.recipe.recipemember.entities.google.GoogleEntity">
+            resultType="dev.recipe.entities.google.GoogleEntity">
         SELECT `id`            AS `id`,
                `email`         AS `email`,
                `nickname`      AS `nickname`,
@@ -74,7 +74,7 @@
     </select>
 
     <select id="selectUserById"
-            resultType="dev.recipe.recipemember.entities.kakao.KakaoEntity">
+            resultType="dev.recipe.entities.kakao.KakaoEntity">
         SELECT `id`              AS `id`,
                `email`           AS `email`,
                `nickname`        AS `nickname`,
@@ -89,7 +89,7 @@
     </select>
 
     <select id="selectEmailAuthByIndex"
-            resultType="dev.recipe.recipemember.entities.EmailAuthEntity">
+            resultType="dev.recipe.entities.EmailAuthEntity">
         SELECT `index`        AS `index`,
                `email`        AS `email`,
                `code`         AS `code`,
@@ -102,7 +102,7 @@
     </select>
 
     <select id="selectEmailAuthByEmailCodeSalt"
-            resultType="dev.recipe.recipemember.entities.EmailAuthEntity">
+            resultType="dev.recipe.entities.EmailAuthEntity">
         SELECT `index`        AS `index`,
                `email`        AS `email`,
                `code`         AS `code`,
@@ -118,7 +118,7 @@
     </select>
 
     <select id="selectUserByEmail"
-            resultType="dev.recipe.recipemember.entities.UserEntity">
+            resultType="dev.recipe.entities.UserEntity">
         SELECT `email`             AS `email`,
                `password`          AS `password`,
                `image_name`        AS `imageName`,
@@ -139,7 +139,7 @@
     </select>
 
     <select id="selectUserByEmailPassword"
-            resultType="dev.recipe.recipemember.entities.UserEntity">
+            resultType="dev.recipe.entities.UserEntity">
         SELECT `email`             AS `email`,
                `password`          AS `password`,
                `image_name`        AS `imageName`,
@@ -161,7 +161,7 @@
     </select>
 
     <select id="selectUserByAgeNameContact"
-            resultType="dev.recipe.recipemember.entities.UserEntity">
+            resultType="dev.recipe.entities.UserEntity">
         SELECT `email`             AS `email`,
                `password`          AS `password`,
                `image_name`        AS `imageName`,
@@ -183,7 +183,7 @@
     </select>
 
     <update id="updateEmailAuth"
-            parameterType="dev.recipe.recipemember.entities.EmailAuthEntity">
+            parameterType="dev.recipe.entities.EmailAuthEntity">
         UPDATE `recipe_member`.`email_auths`
         SET `email`        = #{email},
             `code`         = #{code},
@@ -196,7 +196,7 @@
     </update>
 
     <update id="updateUser"
-            parameterType="dev.recipe.recipemember.entities.UserEntity">
+            parameterType="dev.recipe.entities.UserEntity">
         UPDATE `recipe_member`.`users`
         SET `password`          = #{password},
             `image_name`        = #{imageName},

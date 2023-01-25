@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>읽기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <script defer src="https://kit.fontawesome.com/61c8071357.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{/resources/stylesheets/common.css}">
+    <link rel="stylesheet" th:href="@{/bbs/resources/stylesheets/read.css}">
+    <script defer th:src="@{/bbs/resources/scripts/read.js}"></script>
+</head>
+<body>
+    <th:block th:replace="~{fragments/head :: header}"></th:block>
+    <section id="readWrap">
+
+        <div id="readRecipeHead" class="section-container">
+            <div class="view-head">
+                <div class="cook-profile">
+                    <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/08/09/24b85da64bc678c4cee2122611a667841.jpg"
+                         alt="#" class="cook-photo image">
+                </div>
+                <div class="recipe-info">
+                    <div class="recipe-shop">
+                        <img src="https://recipe1.ezmember.co.kr/img/mobile/btn_pdt.png?v3" alt="#" class="shop-cart image">
+                    </div>
+
+                    <div class="user-info">
+                        <a href="#" class="profile-link">
+                            <img src="https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/UEHMTNLTLU2GPM5REEDSORFZXQ.jpg" alt="#" class="user-photo image">
+                        </a>
+                        <span class="user-name">
+                            강림
+                            <button class="follow" name="follow">소식 받기</button>
+                        </span>
+                    </div>
+
+                    <div class="view-count">
+                        <span class="view">00,000</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="recipe-outline">
+                <div class="recipe-titleBox">
+                    <h3 class="recipe-title">탱글탱글 푸딩처럼 부드러운 급식계란찜 만들기, 중탕달걀찜</h3>
+                </div>
+                <div class="recipe-intro">
+                    오랜만에 학교다닐때 급식소에서 먹었던 계란찜이 생각나 만들어 봤어요.
+                    <br>
+                    재료도 만드는방법도 간단하고, 만들어서 냉장고에 두었다가 차게 식혀서 먹어도 맛있어요.
+                </div>
+            </div>
+            <div class="recipe-category">
+                <div class="category-info person">2인분</div>
+                <div class="category-info time">3분이내</div>
+                <div class="category-info difficulty">아무나</div>
+            </div>
+            <div class="share-btn-container">
+                <a href="#" class="btn url-link">
+                    <img src="https://recipe1.ezmember.co.kr/img/mobile/icon_url_copy.gif" alt="#" class="image">
+                </a>
+                <a href="#" class="btn kakao-story">
+                    <img src="https://recipe1.ezmember.co.kr/img/mobile/icon_url_copy.gif" alt="#" class="image">
+                </a>
+                <a href="#" class="btn facebook">
+                    <img src="https://recipe1.ezmember.co.kr/img/mobile/icon_url_copy.gif" alt="#" class="image">
+                </a>
+                <a href="#" class="btn twitter">
+                    <img src="https://recipe1.ezmember.co.kr/img/mobile/icon_url_copy.gif" alt="#" class="image">
+                </a>
+            </div>
+
+            <div class="btn-container">
+                <div class="btn-box link">
+                    <a href="#" class="btn">
+                        <img src="https://recipe1.ezmember.co.kr/img/btn2_id.png" alt="#" class="image">
+                    </a>
+                    <a href="#" class="btn">
+                        <img src="https://recipe1.ezmember.co.kr/img/btn2_qr.png" alt="#" class="image">
+                    </a>
+                    <a href="#" class="btn">
+                        <img src="https://recipe1.ezmember.co.kr/img/btn2_note.png" alt="#" class="image">
+                    </a>
+                </div>
+                <div class="btn-box convenience">
+                    <a href="#" class="btn">
+                        <img src="https://recipe1.ezmember.co.kr/img/btn2_error.png" alt="#" class="image">
+                    </a>
+                    <a href="#" class="btn">
+                        <img src="https://recipe1.ezmember.co.kr/img/btn2_print.png" alt="#" class="image">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="readRecipeMaterial" class="section-container">
+            <div class="material-head">
+                <h3>재료</h3>
+                <button type="button" class="way">계량법 안내</button>
+            </div>
+            <div class="material-body">
+                <ul class="material">
+                    <b class="material-name">[다시마 육수]</b>
+                    <li class="material-info">
+                        <span class="material-name">다시마</span>
+                        <span class="material-count">2장</span>
+                    </li>
+                    <li class="material-info">
+                        <span class="material-name">다시마</span>
+                        <span class="material-count">2장</span>
+                    </li>
+                </ul>
+                <ul class="material">
+                    <b class="material-name">[계란찜 재료]</b>
+                    <li class="material-info">
+                        <span class="material-name">계란</span>
+                        <span class="material-count">2개</span>
+                    </li>
+                    <li class="material-info">
+                        <span class="material-name">계란</span>
+                        <span class="material-count">2개</span>
+                    </li>
+                    <li class="material-info">
+                        <a class="material-name">계란</a>
+                        <span class="material-count">2개</span>
+                    </li>
+                    <li class="material-info">
+                        <a class="material-name">계란</a>
+                        <span class="material-count">2개</span>
+                    </li>
+                    <li class="material-info">
+                        <a class="material-name">계란</a>
+                        <span class="material-count">2개</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="readRecipeStep" class="section-container">
+            <div class="step-head">
+                <b>조리순서</b>
+            </div>
+            <div class="step-box">
+                <div class="step">
+                    <span class="step-count">1</span>
+                    물 200ml에 5*5 size 다시마 2장을 넣고 20분정도 두어 다시마 육수를 만듭니다.
+                </div>
+                <div class="step">
+                    <span class="step-count">2</span>
+                    큰 그릇이나 볼에 계란 6개를 깨서 넣고
+                </div>
+                <div class="step">
+                    <span class="step-count">3</span>
+                    맛술 한스푼
+                </div>
+                <div class="step">
+                    <span class="step-count">4</span>
+                    설탕 깎아서 2티스푼
+                </div>
+            </div>
+            <div class="complete-images">
+                <img src="https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/UEHMTNLTLU2GPM5REEDSORFZXQ.jpg" alt="완성이미지">
+            </div>
+        </div>
+
+        <div id="readRecipeWriter" class="section-container">
+            <div class="writer-head">
+                <b class="writer-title">레시피 작성자</b>
+                <span></span>
+            </div>
+            <div class="writer-profile">
+                <a href="#" class="writer-photo">
+                    <img src="https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/UEHMTNLTLU2GPM5REEDSORFZXQ.jpg"
+                         alt="#" class="writer-photo image">
+                </a>
+
+                <div class="writer-content">
+                    <p class="writer-name">
+                        강림
+                    </p>
+                    <p class="writer-intro">
+                        <a href="#" class="link">https://blog.naver.com/minitori2346</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="commentContainer" class="section-container">
+            <div class="photo-review">
+                <div class="photo-review-title title">
+                    포토 리뷰 <span class="photo-count count">40</span>
+                </div>
+
+                <ul class="photo-container">
+                   <li>
+                       <a href="#" class="link">
+                           <img src="https://recipe1.ezmember.co.kr/cache/review/2021/09/02/2cf74e4a98f370ee5255397d5b1e33931.jpg" alt="#" class="review-photo image">
+                       </a>
+                   </li>
+                    <li>
+                        <a href="#" class="link">
+                            <img src="https://recipe1.ezmember.co.kr/cache/review/2021/09/02/2cf74e4a98f370ee5255397d5b1e33931.jpg" alt="#" class="review-photo image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">
+                            <img src="https://recipe1.ezmember.co.kr/cache/review/2021/09/02/2cf74e4a98f370ee5255397d5b1e33931.jpg" alt="#" class="review-photo image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">
+                            <img src="https://recipe1.ezmember.co.kr/cache/review/2021/09/02/2cf74e4a98f370ee5255397d5b1e33931.jpg" alt="#" class="review-photo image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">
+                            <img src="https://recipe1.ezmember.co.kr/cache/review/2021/09/02/2cf74e4a98f370ee5255397d5b1e33931.jpg" alt="#" class="review-photo image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">
+                            <img src="https://recipe1.ezmember.co.kr/cache/review/2021/09/02/2cf74e4a98f370ee5255397d5b1e33931.jpg" alt="#" class="review-photo image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="review-container">
+                <div class="review-title title">
+                    요리후기 <span class="review-count count">40</span>
+                </div>
+                <div class="review">
+                    <div class="review-left">
+                        <img src="https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/UEHMTNLTLU2GPM5REEDSORFZXQ.jpg" alt="#" class="user-profile image">
+                    </div>
+                    <div class="review-body">
+                        <div class="review-writer">
+                            <b class="nickName">이강림</b>
+                            2003-01-20
+                            <span class="star-score">
+                                    <i class="fa-regular fa-star icon"></i>
+                                    <i class="fa-regular fa-star icon"></i>
+                                    <i class="fa-regular fa-star icon"></i>
+                                    <i class="fa-regular fa-star icon"></i>
+                                    <i class="fa-regular fa-star icon"></i>
+                            </span>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-text">
+                                ddddddddddddddddddddddddasdfasdfasdfasdfasdfasdfasdfsadfasfadsfasdfasdfasadsfasdfasdf
+                            </div>
+                            <a href="#" class="review-image">
+                                <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/08/09/24b85da64bc678c4cee2122611a667841.jpg" alt="#" class="review-photo image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="review-left">
+                        <img src="https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/UEHMTNLTLU2GPM5REEDSORFZXQ.jpg" alt="#" class="user-profile image">
+                    </div>
+                    <div class="review-body">
+                        <div class="review-writer">
+                            <b class="nickName">이강림</b>
+                            2003-01-20
+                            <span class="star-score">
+                                    <i class="fa-regular fa-star icon"></i>
+                                    <i class="fa-regular fa-star icon"></i>
+                                    <i class="fa-regular fa-star icon"></i>
+                                    <i class="fa-regular fa-star icon"></i>
+                                    <i class="fa-regular fa-star icon"></i>
+                            </span>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-text">
+                                ddddddddddddddddddddddddasdfasdfasdfasdfasdfasdfasdfsadfasfadsfasdfasdfasadsfasdfasdf
+                            </div>
+                            <a href="#" class="review-image">
+                                <img src="https://recipe1.ezmember.co.kr/cache/recipe/2021/08/09/24b85da64bc678c4cee2122611a667841.jpg" alt="#" class="review-photo image">
+                            </a>
+                        </div>
+                        <div class="reply">
+                            <div class="reply-box">
+                                <div class="reply-title">
+                                    <b class="nickName">쉐프의 한마디</b>
+                                    2003-01-20 10:30
+                                </div>
+                                <div class="reply-content">
+                                    adfadsfdsf
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-toggle">
+                    <button type="button" class="review-btn">전체 보기</button>
+                </div>
+            </div>
+            <div class="comment-area">
+                <div class="comment-title title">
+                    댓글 <span class="comment-count count">40</span>
+                </div>
+                <div class="comment">
+                    <div class="comment-left">
+                        <img src="https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/UEHMTNLTLU2GPM5REEDSORFZXQ.jpg" alt="#" class="user-profile image">
+                    </div>
+                    <div class="comment-box">
+                        <div class="comment-writer">
+                            <b class="nickName">이강림</b>
+                            2003-01-20 10:30
+                            <a href="#" class="comment-add">답글</a>
+                        </div>
+                        <div class="comment-content">
+                            fdasdfasfasfklasdf
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-left">
+                        <img src="https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/UEHMTNLTLU2GPM5REEDSORFZXQ.jpg" alt="#" class="user-profile image">
+                    </div>
+                    <div class="comment-box">
+                        <div class="comment-writer">
+                            <b class="nickName">이강림</b>
+                            2003-01-20 10:30
+                            <a href="#" class="comment-add">답글</a>
+                        </div>
+                        <div class="comment-content">
+                            fdasdfasfasfklasdf
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-left">
+                        <img src="https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/UEHMTNLTLU2GPM5REEDSORFZXQ.jpg" alt="#" class="user-profile image">
+                    </div>
+                    <div class="comment-box">
+                        <div class="comment-writer">
+                            <b class="nickName">이강림</b>
+                            2003-01-20 10:30
+                            <a href="#" class="comment-add">답글</a>
+                        </div>
+                        <div class="comment-content">
+                            fdasdfasfasfklasdf
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-toggle">
+                    <button type="button" class="comment-btn">전체 보기</button>
+                </div>
+                <div class="comment-input-box">
+                    <div class="comment-input-left">
+                        <img src="https://recipe1.ezmember.co.kr/img/pic_none3.gif" alt="#" class="image">
+                        <input type="file" class="comment-input" name="commentInput" accept="image/**">
+                    </div>
+                    <form class="comment-input-group" id="commentForm">
+                        <label>
+                            <textarea name="commentText" class="commentText" cols="30" rows="10"
+                            placeholder="무엇이 궁금하신가요? 댓글을 남겨주세요."></textarea>
+                        </label>
+                        <button type="button" name="commentSend" class="comment-send">
+                            등록
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dev.recipe.mappers.BbsMapper">
+
+    <insert id="insertRecipe"
+            useGeneratedKeys="true"
+            keyProperty="index"
+            keyColumn="index"
+            parameterType="dev.recipe.entities.bbs.RecipeEntity">
+            INSERT INTO `recipe_bbs`.`recipe_article`(`user_email`,`title`,`recipe_introduce`,`category_type`,
+            `category_situation`,`category_matter`,`category_how`, `info_personnel`,`info_time`,
+            `info_difficult`,`cook_tip`, `isOpen`,`main_image`,`main_imageType`)
+            VALUES (#{userEmail}, #{title}, #{recipeIntroduce}, #{categoryType}, #{categorySituation},
+                    #{categoryMatter}, #{categoryHow}, #{infoPersonnel},
+                    #{infoTime}, #{infoDifficult}, #{cookTip},
+                    #{isOpen}, #{mainImage}, #{mainImageType});
+    </insert>
+
+    <insert id="insertMaterial"
+    useGeneratedKeys="true"
+    keyProperty="index"
+    keyColumn="index"
+    parameterType="dev.recipe.entities.bbs.MaterialEntity">
+    INSERT INTO `recipe_bbs`.`material`(`material_title`,`article_index`)
+    VALUES (#{materialTitle},#{articleIndex})
+    </insert>
+
+    <insert id="insertMaterialContent"
+            parameterType="dev.recipe.entities.bbs.MaterialContentEntity">
+        INSERT INTO `recipe_bbs`.`material_content`(`material_name`,`material_count`,`material_index`)
+        VALUES (#{materialName},#{materialCount},#{materialIndex})
+    </insert>
+
+    <insert id="insertCompleteImages"
+    parameterType="dev.recipe.entities.bbs.CompleteImageEntity">
+    INSERT INTO `recipe_bbs`.`complete_image`(`complete_image`,`complete_image_type`,`article_index`)
+    VALUES (#{completeImage},#{completeImageType},#{articleIndex})
+    </insert>
+
+    <insert id="insertStep"
+    parameterType="dev.recipe.entities.bbs.StepEntity">
+    INSERT INTO `recipe_bbs`.`step`(`step_content`, `step_image`, `article_index`,`type`)
+    VALUES (#{stepContent},#{stepImage},#{articleIndex}, #{type})
+    </insert>
+
+</mapper>

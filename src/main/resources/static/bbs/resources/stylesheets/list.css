@@ -1,0 +1,565 @@
+@charset "UTF-8";
+
+
+li{
+    list-style: none;
+}
+.title-box {
+    margin: 2rem 2rem 1rem 2rem;
+    display: block;
+}
+.title{
+    margin-left:4.2rem;
+
+}
+.image{
+    margin-bottom: 0.3rem;
+}
+
+
+#listWrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#recipeEvent {
+    margin-top: 1rem;
+    background-color: rgb(255,255,255);
+    width: 65%;
+    height: 9rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
+#recipeEvent > .event {
+    width: 100%;
+    height: 75%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0;
+}
+
+
+#recipeEvent > .event > .event-list {
+    height: 100%;
+    width: 86%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0;
+
+
+}
+
+#recipeEvent > .event > .event-list >.event-item {
+    width: 37%;
+    height: 90%;
+    text-align: center;
+}
+
+
+#recipeEvent > .event > .event-list > .event-item > .event-link > .image{
+    width: 96%;
+    height: 100%;
+
+}
+
+
+
+#shopContainer {
+    background-color: rgb(255,255,255);
+    width: 65%;
+    height: 27rem;
+    margin-top: 1rem;
+
+}
+
+
+#shopContainer > .shop {
+    height: 75%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+#shopContainer > .shop > .shop-list {
+    height: 100%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+
+
+#shopContainer > .shop > .shop-list > .shop-item{
+    width: 19%;
+    height: 100%;
+
+}
+
+#shopContainer > .shop > .shop-list > .shop-item > .shop-link > .image {
+    width: 97%;
+    height: 65%;
+}
+
+#tipContainer{
+    background-color: rgb(255,255,255);
+    width: 65%;
+    height: 19rem;
+    margin-top: 0.0001rem;
+    padding-bottom: 0.5rem;
+    border: 0.01rem solid rgb(212,214,216);
+}
+
+#tipContainer > .tip {
+    height: 75%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+#tipContainer > .tip > .tip-list {
+    height: 100%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+
+}
+
+#tipContainer > .tip > .tip-list > .tip-item {
+    width: 24%;
+    height: 100%;
+    margin-top: 0;
+}
+
+#tipContainer > .tip > .tip-list > .tip-item > .tip-link > .image{
+
+    width: 100%;
+    height: 65%;
+}
+
+
+#issueContainer{
+    background-color: rgb(255,255,255);
+    width: 65%;
+    height: 19rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#issueContainer > .issue {
+
+    height: 75%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+#issueContainer > .issue > .issue-list {
+    height: 100%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+
+}
+
+#issueContainer > .issue > .issue-list > .issue-item {
+    width: 24%;
+    height: 100%;
+
+}
+
+#issueContainer > .issue > .issue-list > .issue-item > .issue-link > .image{
+
+    width: 100%;
+    height: 65%;
+}
+
+
+#chefContainer{
+    background-color: rgb(255,255,255);
+    width: 65%;
+    height: 17rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#chefContainer > .chef-title > h3{
+    margin-bottom: 1px;
+}
+
+
+#chefContainer > .chef {
+    height: 85%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-right: 40px;
+}
+
+#chefContainer > .chef > .chef-list {
+    margin-top: 0;
+    height: 100%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#chefContainer > .chef > .chef-list > .chef-item {
+    width: 24%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding-top: 0;
+
+}
+
+#chefContainer > .chef > .chef-list > .chef-item > .chef-link {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 60%;
+    margin-bottom: 0;
+
+}
+
+#chefContainer > .chef > .chef-list > .chef-item > .chef-link > .image{
+    margin-top: 1.4rem;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0.7rem;
+}
+
+#chefContainer > .chef > .chef-list > .chef-item > .chef-link > .chef-name {
+    text-align: center;
+}
+
+#chefContainer > .chef > .chef-list > .chef-item > .follow-link {
+    margin-top: 1rem;
+    padding: 0.2rem 0.4rem 0.2rem 0.2rem;
+    border-radius: 20% / 50%;
+    border: 0.0625rem solid rgb(150,167,10);
+    width: 75%;
+}
+
+#chefContainer > .chef > .chef-list > .chef-item > .follow-link > .follow{
+    width: 100%;
+    color: rgb(150,167,10);
+    padding: 0.1rem;
+    margin-right: 2px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#rankingContainer {
+    background-color: rgb(255,255,255);
+    width: 65%;
+    height: 19rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#rankingContainer > .ranking{
+    height: 75%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+#rankingContainer > .ranking > .ranking-list{
+
+    height: 100%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#rankingContainer > .ranking > .ranking-list > .ranking-item{
+    width: 24%;
+    height: 100%;
+
+}
+
+#rankingContainer > .ranking > .ranking-list > .ranking-item > .ranking-link > .image{
+    width: 100%;
+    height: 65%;
+}
+
+#recommendContainer {
+    background-color: rgb(255,255,255);
+    width: 65%;
+    height: 19rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#recommendContainer > .recommend{
+    height: 75%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+#recommendContainer > .recommend > .recommend-list{
+
+    height: 100%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#recommendContainer > .recommend > .recommend-list > .recommend-item{
+    width: 24%;
+    height: 100%;
+
+}
+
+#recommendContainer > .recommend > .recommend-list > .recommend-item > .recommend-link > .image{
+    width: 100%;
+    height: 65%;
+}
+
+
+#magazineContainer {
+    background-color: rgb(255,255,255);
+    width: 65%;
+    height: 19rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#magazineContainer > .magazine{
+    height: 75%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+#magazineContainer > .magazine > .magazine-list{
+
+    height: 100%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#magazineContainer > .magazine > .magazine-list > .magazine-item{
+    width: 24%;
+    height: 100%;
+
+}
+
+#magazineContainer > .magazine > .magazine-list > .magazine-item > .magazine-link > .image{
+    width: 100%;
+    height: 65%;
+}
+
+#categoryContainer {
+    background-color: rgb(255,255,255);
+    width: 65%;
+    height: 12rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#categoryContainer > .category{
+    height: 65%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-bottom: 1rem;
+
+}
+
+#categoryContainer > .category > .category-list{
+    height: 100%;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#categoryContainer > .category > .category-list > .category-item{
+    width: 6%;
+    height: 100%;
+}
+
+#categoryContainer > .category > .category-list > .category-item > .category-link > .category-title{
+    text-align: center;
+    display: block;
+}
+
+#categoryContainer > .category > .category-list > .category-item > .category-link > .image{
+    width: 100%;
+    height: 49.88%;
+}
+
+
+#best-container{
+    background-color: rgb(255,255,255);
+    width: 65%;
+    height: 50.5rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#best-container > .best {
+    height: 80%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-bottom: 1rem;
+}
+
+#best-container > .best > .best-list{
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+
+
+}
+
+#best-container > .best > .best-list > .best-item {
+    width: 19.5%;
+    height: 50%;
+    margin-top: 1rem;
+}
+
+#best-container > .best > .best-list > .best-item > .best-num{
+    border: 0.0625rem solid rgb(186,188,190);
+    background-color: rgb(255,255,255);
+    width: 34px;
+    height: 35px;
+    border-radius: 15%;
+    position: absolute;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#best-container > .best > .best-list > .best-item > .best-image > a > .image{
+    width:222px;
+    height:222px;
+    border-radius: 2%;
+}
+
+#best-container > .best > .best-list > .best-item > .best-title{
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#best-container > .best > .best-list > .best-item > .best-title > .best-head {
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+#best-container > .best > .best-list > .best-item > .best-title > .best-writer{
+    height: 20px;
+    display: inline-block;
+
+}
+#best-container > .best > .best-list > .best-item > .best-title > .best-writer > a {
+    font-size: 14px;
+    color: rgb(86,88,90);
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    height: 100%;
+}
+
+#best-container > .best > .best-list > .best-item > .best-title > .best-writer > a > .image {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-right: 2px;
+}
+
+#best-container > .best > .best-list > .best-item > .best-title > .score-container{
+    height: 18px;
+
+}
+
+#best-container > .best > .best-list > .best-item > .best-title > .score-container > .score {
+    letter-spacing: -2px;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+#best-container > .best > .best-list > .best-item > .best-title > .score-container > .score > .icon {
+    color: rgb(255,182,0);
+}
+
+#best-container > .best > .best-list > .best-item > .best-title > .score-container > .judge {
+    font-size: 12px;
+    color: rgb(126,128,130);
+}
+#best-container > .best > .best-list > .best-item > .best-title > .score-container > .view {
+    font-size: 13px;
+    color: rgb(126,128,130);
+}
