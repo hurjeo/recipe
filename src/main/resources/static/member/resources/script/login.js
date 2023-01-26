@@ -41,8 +41,8 @@ form.onsubmit = e => {
                 const responseObject = JSON.parse(xhr.responseText);
                 switch (responseObject['result']) {
                     case 'success':
-                        // window.location.replace('http://localhost:8080/bbs/write');
-                        alert("로그인 성공");
+                        window.location.replace('http://recipe.wndud/bbs/write');
+                        // alert("로그인 성공");
                         break;
                     default:
                         Submit.show('비밀번호가 일치하지 않습니다.');
@@ -58,18 +58,18 @@ form.onsubmit = e => {
 kakao?.addEventListener('click', e => {
     e.preventDefault();
     window.open(
-        'https://kauth.kakao.com/oauth/authorize?client_id=5ed9066f02e45714ed6822817956260d&redirect_uri=https://ofallrecipe.com/member/kakao&response_type=code','_blank', 'width=480', 'height=519');
+        'https://kauth.kakao.com/oauth/authorize?client_id=5ed9066f02e45714ed6822817956260d&redirect_uri=https://recipe.wndud.com/member/kakao&response_type=code','_blank', 'width=480', 'height=519');
 });
 
 naver?.addEventListener('click', e => {
     e.preventDefault();
     window.open(
-        'https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=0sxOPxjHRB5ik5dfST85&state=STATE_STRING&redirect_uri=https://ofallrecipe.com/member/naver','_blank');
+        'https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=0sxOPxjHRB5ik5dfST85&state=STATE_STRING&redirect_uri=https://recipe.wndud.com/member/naver','_blank');
 });
 
 google?.addEventListener('click', e => {
     e.preventDefault();
-    window.open('https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A//www.googleapis.com/auth/drive.metadata.readonly&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=https://ofallrecipe.com/member/google&client_id=608196039616-p7on7p7379h5j4vatkh0uttgg14nrr4u.apps.googleusercontent.com', '_blank', 'width=480', 'heigth=519');
+    window.open('https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A//www.googleapis.com/auth/drive.metadata.readonly&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=https://recipe.wndud.com/member/google&client_id=608196039616-p7on7p7379h5j4vatkh0uttgg14nrr4u.apps.googleusercontent.com', '_blank', 'width=480', 'heigth=519');
 });
 
 facebook.addEventListener('click', e => {
