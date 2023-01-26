@@ -41,7 +41,8 @@ form.onsubmit = e => {
                 const responseObject = JSON.parse(xhr.responseText);
                 switch (responseObject['result']) {
                     case 'success':
-                        window.location.replace('http://localhost:8080/bbs/write');
+                        // window.location.replace('http://localhost:8080/bbs/write');
+                        alert("로그인 성공");
                         break;
                     default:
                         Submit.show('비밀번호가 일치하지 않습니다.');
