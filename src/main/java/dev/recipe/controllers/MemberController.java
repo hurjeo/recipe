@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.mail.MessagingException;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
@@ -78,8 +79,8 @@ public class MemberController {
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public String postEmail(UserEntity user, EmailAuthEntity emailAuth) throws NoSuchAlgorithmException, MessagingException {
-        Enum<?> result = this.memberService.sendEmail(user, emailAuth);
+    public String postEmail(UserEntity user, EmailAuthEntity emailAuth, HttpServletRequest servletRequest) throws NoSuchAlgorithmException, MessagingException {
+        Enum<?> result = this.memberService.sendEmail(user, emailAuth, servletRequest);
         JSONObject responseObject = new JSONObject();
         responseObject.put("result", result.name().toLowerCase());
         if (result == CommonResult.SUCCESS) {
@@ -136,8 +137,8 @@ public class MemberController {
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public String postRecoverPassword(EmailAuthEntity emailAuth) throws MessagingException {
-        Enum<?> result = this.memberService.recoverPasswordSend(emailAuth);
+    public String postRecoverPassword(EmailAuthEntity emailAuth, HttpServletRequest servletRequest) throws MessagingException {
+        Enum<?> result = this.memberService.recoverPasswordSend(emailAuth, servletRequest);
         JSONObject responseObject = new JSONObject();
         responseObject.put("result", result.name().toLowerCase());
         if (result == CommonResult.SUCCESS) {
@@ -212,9 +213,9 @@ public class MemberController {
     @GetMapping(value = "kakao", produces = MediaType.TEXT_PLAIN_VALUE)
     public ModelAndView getKakao(@RequestParam(value = "code") String code,
                                  @RequestParam(value = "error", required = false) String error,
-                                 @RequestParam(value = "error_description", required = false) String errorDescription,
+                                 @RequestParam(value = "error_description", required = false) String errorDescription, HttpServletRequest servletRequest,
                                  HttpSession session) throws IOException {
-        String accessToken = this.memberService.getKakaoAccessToken(code);
+        String accessToken = this.memberService.getKakaoAccessToken(code, servletRequest);
         KakaoEntity kakaos = this.memberService.getKakaoUserInfo(accessToken);
         session.setAttribute("kakao", kakaos);
         return new ModelAndView("member/kakao");
@@ -223,9 +224,9 @@ public class MemberController {
     @GetMapping(value = "naver", produces = MediaType.TEXT_HTML_VALUE)
     public ModelAndView getNaver(@RequestParam(value = "code") String code,
                                  @RequestParam(value = "error", required = false) String error,
-                                 @RequestParam(value = "error_description", required = false) String errorDescription,
+                                 @RequestParam(value = "error_description", required = false) String errorDescription, HttpServletRequest servletRequest,
                                  HttpSession session) throws IOException {
-        String accessToken = this.memberService.getNaverAccessToken(code);
+        String accessToken = this.memberService.getNaverAccessToken(code, servletRequest);
         NaverEntity naver = this.memberService.getNaverUserInfo(accessToken);
         session.setAttribute("naver", naver);
         return new ModelAndView("member/naver");
@@ -234,9 +235,9 @@ public class MemberController {
     @GetMapping(value = "google", produces = MediaType.TEXT_HTML_VALUE)
     public ModelAndView getGoogle(@RequestParam(value = "code") String code,
                                   @RequestParam(value = "error", required = false) String error,
-                                  @RequestParam(value = "error_description", required = false) String errorDescription,
+                                  @RequestParam(value = "error_description", required = false) String errorDescription, HttpServletRequest servletRequest,
                                   HttpSession session) throws IOException {
-        String accessToken = this.memberService.getGoogleAccessToken(code);
+        String accessToken = this.memberService.getGoogleAccessToken(code, servletRequest);
 //        GoogleEntity google = this.memberService.getGoogleUserInfo(accessToken);
 //        session.setAttribute("google", google);
         return new ModelAndView("member/google");

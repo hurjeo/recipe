@@ -57,18 +57,18 @@ form.onsubmit = e => {
 kakao?.addEventListener('click', e => {
     e.preventDefault();
     window.open(
-        'https://kauth.kakao.com/oauth/authorize?client_id=5ed9066f02e45714ed6822817956260d&redirect_uri=http://localhost:8080/member/kakao&response_type=code','_blank', 'width=480', 'height=519');
+        'https://kauth.kakao.com/oauth/authorize?client_id=5ed9066f02e45714ed6822817956260d&redirect_uri=https://ofallrecipe.com/member/kakao&response_type=code','_blank', 'width=480', 'height=519');
 });
 
 naver?.addEventListener('click', e => {
     e.preventDefault();
     window.open(
-        'https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=0sxOPxjHRB5ik5dfST85&state=STATE_STRING&redirect_uri=http://localhost:8080/member/naver','_blank');
+        'https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=0sxOPxjHRB5ik5dfST85&state=STATE_STRING&redirect_uri=https://ofallrecipe.com/member/naver','_blank');
 });
 
 google?.addEventListener('click', e => {
     e.preventDefault();
-    window.open('https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A//www.googleapis.com/auth/drive.metadata.readonly&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=http://localhost:8080/member/google&client_id=608196039616-p7on7p7379h5j4vatkh0uttgg14nrr4u.apps.googleusercontent.com', '_blank', 'width=480', 'heigth=519');
+    window.open('https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A//www.googleapis.com/auth/drive.metadata.readonly&include_granted_scopes=true&response_type=code&state=state_parameter_passthrough_value&redirect_uri=https://ofallrecipe.com/member/google&client_id=608196039616-p7on7p7379h5j4vatkh0uttgg14nrr4u.apps.googleusercontent.com', '_blank', 'width=480', 'heigth=519');
 });
 
 facebook.addEventListener('click', e => {

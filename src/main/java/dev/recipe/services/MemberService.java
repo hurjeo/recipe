@@ -25,6 +25,7 @@ import org.thymeleaf.context.Context;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -74,7 +75,7 @@ public class MemberService {
     }
 
     @Transactional
-    public Enum<? extends IResult> sendEmail(UserEntity user, EmailAuthEntity emailAuth) throws NoSuchAlgorithmException, MessagingException {
+    public Enum<? extends IResult> sendEmail(UserEntity user, EmailAuthEntity emailAuth, HttpServletRequest servletRequest) throws NoSuchAlgorithmException, MessagingException {
         UserEntity userEntity = this.memberMapper.selectUserByEmail(user.getEmail());
         if (userEntity != null) {
             return SendEmailAuthResult.EMAIL_DUPLICATED;
@@ -109,6 +110,9 @@ public class MemberService {
 
         Context context = new Context(); //org.thymeleaf ...
         context.setVariable("code", emailAuth.getCode());
+        context.setVariable("domain", String.format("%s://%s",
+                servletRequest.getScheme(),
+                servletRequest.getServerName()));
 
         String text = this.templateEngine.process("member/registerEmailAuth", context);
         MimeMessage mail = this.mailSender.createMimeMessage();
@@ -153,7 +157,7 @@ public class MemberService {
     }
 
     @Transactional
-    public Enum<? extends IResult> recoverPasswordSend(EmailAuthEntity emailAuth) throws MessagingException {
+    public Enum<? extends IResult> recoverPasswordSend(EmailAuthEntity emailAuth, HttpServletRequest servletRequest) throws MessagingException {
         UserEntity user = this.memberMapper.selectUserByEmail(emailAuth.getEmail());
         if (user == null) {
             return CommonResult.FAILURE;
@@ -179,6 +183,9 @@ public class MemberService {
         context.setVariable("email", emailAuth.getEmail());
         context.setVariable("code", emailAuth.getCode());
         context.setVariable("salt", emailAuth.getSalt());
+        context.setVariable("domain", String.format("%s://%S",
+                servletRequest.getScheme(),
+                servletRequest.getServerName()));
 
         String text = this.templateEngine.process("member/recoverPasswordEmailAuth", context);
         MimeMessage mail = this.mailSender.createMimeMessage();
@@ -243,7 +250,7 @@ public class MemberService {
         return userEntity;
     }
 
-    public String getKakaoAccessToken(String code) throws IOException {
+    public String getKakaoAccessToken(String code, HttpServletRequest servletRequest) throws IOException {
         URL url = new URL("https://kauth.kakao.com/oauth/token");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
@@ -254,7 +261,10 @@ public class MemberService {
                 StringBuilder requestBuilder = new StringBuilder();
                 requestBuilder.append("grant_type=authorization_code");
                 requestBuilder.append("&client_id=5ed9066f02e45714ed6822817956260d");
-                requestBuilder.append("&redirect_uri=http://localhost:8080/member/kakao");
+////                requestBuilder.append("&redirect_uri=https://ofallrecipe.com/member/kakao");
+                requestBuilder.append(String.format("&redirect_uri=%s://%s/member/kakao",
+                        servletRequest.getScheme(),
+                        servletRequest.getServerName()));
                 requestBuilder.append("&code=").append(code);
                 bufferedWriter.write(requestBuilder.toString());
                 bufferedWriter.flush();
@@ -312,7 +322,7 @@ public class MemberService {
         return kakaos;
     }
 
-    public String getNaverAccessToken(String code) throws IOException {
+    public String getNaverAccessToken(String code, HttpServletRequest servletRequest) throws IOException {
         URL url = new URL("https://nid.naver.com/oauth2.0/token");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
@@ -324,7 +334,10 @@ public class MemberService {
                 requestBuilder.append("grant_type=authorization_code");
                 requestBuilder.append("&client_id=0sxOPxjHRB5ik5dfST85");
                 requestBuilder.append("&client_secret=4X39q7SDzu");
-                requestBuilder.append("&redirect_uri=http://localhost:8080/member/naver");
+//                requestBuilder.append("&redirect_uri=https://ofallrecipe.com/member/naver");
+                requestBuilder.append(String.format("&redirect_uri=%s://%s/member/naver",
+                        servletRequest.getScheme(),
+                        servletRequest.getServerName()));
                 requestBuilder.append("&code=").append(code);
                 requestBuilder.append("&state=state");
                 bufferedWriter.write(requestBuilder.toString());
@@ -381,7 +394,7 @@ public class MemberService {
         return naver;
     }
 
-    public String getGoogleAccessToken(String code)throws IOException {
+    public String getGoogleAccessToken(String code, HttpServletRequest servletRequest)throws IOException {
             URL url = new URL("https://oauth2.googleapis.com/token");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
@@ -393,7 +406,10 @@ public class MemberService {
                     requestBuilder.append("grant_type=authorization_code");
                     requestBuilder.append("&client_id=608196039616-p7on7p7379h5j4vatkh0uttgg14nrr4u.apps.googleusercontent.com");
                     requestBuilder.append("&client_secret=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");
-                    requestBuilder.append("&redirect_uri=http://localhost:8080/member/google");
+//                    requestBuilder.append("&redirect_uri=https://ofallrecipe.com/member/google");
+                    requestBuilder.append(String.format("&redirect_uri=%s://%s/member/google",
+                            servletRequest.getScheme(),
+                            servletRequest.getServerName()));
                     requestBuilder.append("&code=").append(code);
                     bufferedWriter.write(requestBuilder.toString());
                     bufferedWriter.flush();
