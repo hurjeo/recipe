@@ -14,7 +14,6 @@
 <body>
     <th:block th:replace="~{fragments/bbs/head :: header}"></th:block>
     <section id="readWrap">
-
         <div id="readRecipeHead" class="section-container">
             <div class="view-head">
                 <div class="cook-profile">
@@ -349,21 +348,21 @@
                 <div class="comment-toggle">
                     <button type="button" class="comment-btn">전체 보기</button>
                 </div>
-                <div class="comment-input-box">
-                    <div class="comment-input-left">
-                        <img src="https://recipe1.ezmember.co.kr/img/pic_none3.gif" alt="#" class="image">
-                        <input type="file" class="comment-input" name="commentInput" accept="image/**">
-                    </div>
-                    <form class="comment-input-group" id="commentForm">
+                <form class="comment-input-group" id="commentForm">
+                    <div class="comment-input-box">
+                        <div class="comment-input-left">
+                            <img src="https://recipe1.ezmember.co.kr/img/pic_none3.gif" alt="#" class="image">
+                            <input type="file" class="comment-input" name="commentInput" accept="image/**">
+                        </div>
                         <label>
                             <textarea name="commentText" class="commentText" cols="30" rows="10"
-                            placeholder="무엇이 궁금하신가요? 댓글을 남겨주세요."></textarea>
+                                      placeholder="무엇이 궁금하신가요? 댓글을 남겨주세요."></textarea>
                         </label>
                         <button type="button" name="commentSend" class="comment-send">
                             등록
                         </button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
 

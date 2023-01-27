@@ -648,34 +648,32 @@
     cursor: pointer;
 }
 
-#commentContainer > .comment-area > .comment-input-box {
+#commentContainer > .comment-area > .comment-input-group > .comment-input-box {
     margin-top: 2rem;
     align-items: flex-start;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 795px;
 
     margin-bottom: 2rem;
 }
 
-#commentContainer > .comment-area > .comment-input-box > .comment-input-left > .image {
+#commentContainer > .comment-area > .comment-input-group > .comment-input-box > .comment-input-left > .image {
     width: 98px;
     height: 98px;
     border: 0.0625rem solid rgb(220,220,220);
 }
-#commentContainer > .comment-area > .comment-input-box > .comment-input-left > .comment-input{
+#commentContainer > .comment-area > .comment-input-group > .comment-input-box > .comment-input-left > .comment-input{
     display: none;
 }
 
-#commentContainer > .comment-area > .comment-input-box > .comment-input-group {
-    width: 680px;
-    height: 100px;
-    display: flex;
+#commentContainer > .comment-area > .comment-input-box >  label{
+    margin-left: 1rem;
 }
 
 
-#commentContainer > .comment-area > .comment-input-box > .comment-input-group > label > .commentText{
+#commentContainer > .comment-area > .comment-input-group > .comment-input-box > label > .commentText{
     width: 575px;
     height: 100px;
     resize: none;
@@ -684,7 +682,7 @@
     padding: 0.5rem 1rem;
 }
 
-#commentContainer > .comment-area > .comment-input-box > .comment-input-group > .comment-send {
+#commentContainer > .comment-area > .comment-input-group > .comment-input-box > .comment-send {
     width: 100px;
     height: 100px;
 

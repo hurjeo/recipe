@@ -45,4 +45,25 @@
     VALUES (#{stepContent},#{stepImage},#{articleIndex}, #{type})
     </insert>
 
+    <select id="selectRecipe"
+    >
+        SELECT `categoryHow`.`category_how`             AS `how`,
+               `category_matter`.`category_matter`,
+               (SELECT `category_situation`.`category_situation`
+                FROM `recipe_bbs`.`category_situation`) AS `situation`,
+               (SELECT `category_type`.`category_type`
+                FROM `recipe_bbs`.`category_type`)      AS `type`,
+               (SELECT `info_difficult`.`difficult`
+                FROM `recipe_bbs`.`info_difficult`)     AS `difficult`,
+               (SELECT `info_personnel`.`personnel`
+                FROM `recipe_bbs`.`info_personnel`)     AS `personnel`,
+               (SELECT `info_time`.`time`
+                FROM `recipe_bbs`.`info_time`)          AS `time`
+        FROM `recipe_bbs`.`category_how` AS `categoryHow`
+            LEFT OUTER JOIN `recipe_bbs`.`category_matter`
+            ON `categoryHow`.`index` = `cat`
+
+
+    </select>
+
 </mapper>
